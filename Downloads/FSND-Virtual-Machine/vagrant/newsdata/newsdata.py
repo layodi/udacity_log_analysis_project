@@ -46,6 +46,7 @@ def get_log_errors():
         number_of_errors = str(int(errors[i][1]))
         print date_recorded + " - " + number_of_errors + "% errors"
 
+
 get_popular_articles()
 get_popular_authors()
 get_log_errors()
