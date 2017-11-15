@@ -4,6 +4,7 @@ import psycopg2
 
 DBNAME = "news"
 
+
 def get_popular_articles():
     """Return the most popular three articles of all time"""
     db = psycopg2.connect(database=DBNAME)
@@ -17,6 +18,7 @@ def get_popular_articles():
         number_of_views = str(articles[i][1])
         print "\"" + article_title + "\" - " + number_of_views + " views"
 
+
 def get_popular_authors():
     """Return the most popular authors of all time"""
     db = psycopg2.connect(database=DBNAME)
@@ -29,6 +31,7 @@ def get_popular_authors():
         authors_name = authors[i][0]
         number_of_views = str(authors[i][1])
         print "\"" + authors_name + "\" - " + number_of_views + " views"
+
 
 def get_log_errors():
     """Return the most popular authors of all time"""
